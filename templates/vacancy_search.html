@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vacancy Search</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Search Vacancies</h1>
+<form method="GET">
+    Salary From: <input type="number" name="salary_from"><br>
+    Salary To: <input type="number" name="salary_to"><br>
+    Exact Salary: <input type="number" name="salary"><br>
+    <button type="submit">Search</button>
+</form>
+
+<h2>Filtered Vacancies</h2>
+<ul class="list-group">
+    {% for vacancy in vacancies %}
+        <li class="list-group-item">{{ vacancy.position }} {{ vacancy.salary }} $</li>
+    {% endfor %}
+</ul>
+
+<!-- Include Bootstrap JS (optional, for Bootstrap features like modals, tooltips, etc.) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

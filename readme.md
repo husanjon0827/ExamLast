@@ -1,0 +1,1 @@
+### 1 soft delete da login(admin)-password(admin) ni o'chirgan lekin login(bekzod)-password(admin) bilan kirsez 2 ta user turgan bo'ladi admin bilan kirmidi

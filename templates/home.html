@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to our Job Portal</h1>
+    <p>Find your dream job here!</p>
+
+    <a class="btn btn-primary" href="{% url 'search_vacancies' %}">Search Vacancies</a>
+    <h1>Please see the available vacancies below:</h1>
+    <ul class="list-group">
+        {% for vacancy in vacancies %}
+            <li class="list-group-item">
+                <b>Required position:</b> {{ vacancy.position|title }} <br>
+                <b>Tasks:</b> {{ vacancy.desc }} <br>
+                <b>Salary offered:</b> {{ vacancy.salary }} $
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- Include Bootstrap JS (optional, for Bootstrap features like modals, tooltips, etc.) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
